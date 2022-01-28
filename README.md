@@ -16,7 +16,7 @@
 
 [x] 5.3. [Введение. Экосистема. Архитектура. Жизненный цикл Docker контейнера](05-virt-03-docker\README.md)
 
-[] 5.4. [Оркестрация группой Docker контейнеров на примере Docker Compose.](https://github.com/netology-code/virt-homeworks/tree/virt-11/05-virt-04-docker-compose)
+[x] 5.4. [Оркестрация группой Docker контейнеров на примере Docker Compose.](05-virt-04-docker-compose\README.md)
 
 [] 5.5. [ Оркестрация кластером Docker контейнеров на примере Docker Swarm.](https://github.com/netology-code/virt-homeworks/tree/virt-11/05-virt-05-docker-swarm)
 
