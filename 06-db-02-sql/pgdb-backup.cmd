@@ -1,0 +1,1 @@
+docker exec postgres_container /bin/bash -c "export PGPASSWORD=pgpwd4myusr && /usr/bin/pg_dump -U test-admin-user test_db | gzip -9 > /pgbackup/postgres-backup.sql.gz"

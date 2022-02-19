@@ -1,0 +1,10 @@
+insert into "orders"(descr, price) VALUES('Шоколад', 10);
+insert into "orders"(descr, price) VALUES('Принтер', 3000);
+insert into "orders"(descr, price) VALUES('Книга', 500);
+insert into "orders" (descr, price) VALUES('Монитор', 7000);
+insert into "orders" (descr, price) VALUES('Гитара', 4000);
+insert into "clients" (fullname, country, idorder) VALUES('Иванов Иван Иванович', 'USA', 3);
+insert into "clients" (fullname, country, idorder) VALUES('Петров Петр Петрович', 'Canada', 4);
+insert into "clients" (fullname, country, idorder) VALUES('Иоганн Себастьян Бах', 'Japan', 5);
+insert into "clients" (fullname, country) VALUES('Ронни Джеймс Дио', 'Russia');
+insert into "clients" (fullname, country) VALUES('Ritchie Blackmore', 'Russia');
