@@ -77,3 +77,4 @@ key.json
 .idea
 pgdata/
 pgbackup/
+mysql/

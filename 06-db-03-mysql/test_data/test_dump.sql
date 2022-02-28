@@ -15,6 +15,15 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+CREATE USER IF NOT EXISTS 'test'@'localhost'
+  IDENTIFIED WITH mysql_native_password BY 'test_db';
+ALTER USER 'test'@'localhost' WITH MAX_QUERIES_PER_HOUR 100;
+ALTER USER 'test'@'localhost'
+  PASSWORD EXPIRE INTERVAL 180 DAY
+  FAILED_LOGIN_ATTEMPTS 3
+  PASSWORD_LOCK_TIME 2 ;
+ALTER USER 'test'@'localhost' ATTRIBUTE '{"fname":"James", "lname":"Pretty"}';
+
 --
 -- Table structure for table `orders`
 --
@@ -27,8 +36,10 @@ CREATE TABLE `orders` (
   `title` varchar(80) NOT NULL,
   `price` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ROW_FORMAT=COMPRESSED ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+GRANT SELECT ON test_db.orders TO 'test'@'localhost';
 
 --
 -- Dumping data for table `orders`
@@ -40,6 +51,8 @@ INSERT INTO `orders` VALUES (1,'War and Peace',100),(2,'My little pony',500),(3,
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+SET profiling = 1;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
