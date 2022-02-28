@@ -49,7 +49,7 @@ Threads: 3  Questions: 6  Slow queries: 0  Opens: 118  Flush tables: 3  Open tab
 **Приведите в ответе** количество записей с `price` > 300.
 
 ```sql
-mysql> select count(*) from orders where price > 300;
+mysql> select count(*) from test_db.orders where price > 300;
 +----------+
 | count(*) |
 +----------+
