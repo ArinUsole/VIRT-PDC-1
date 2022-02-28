@@ -26,7 +26,7 @@
 
 [x] 6.2. [SQL](06-db-02-sql)
 
-[] 6.3. [MySQL](06-db-03-mysql)
+[x] 6.3. [MySQL](06-db-03-mysql)
 
 [] 6.4. [PostgreSQL](06-db-04-postgresql)
 
