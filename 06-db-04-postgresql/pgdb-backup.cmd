@@ -1,0 +1,1 @@
+docker exec postgres_container /bin/bash -c "export PGPASSWORD=secret && /usr/bin/pg_dump -U postgres test_database > /pgbackup/postgres-backup.sql"
