@@ -32,7 +32,7 @@
 
 [x] 6.5. [Elasticsearch](06-db-05-elasticsearch)
 
-[] 6.6. [Troubleshooting](06-db-06-troobleshooting)
+[x] 6.6. [Troubleshooting](06-db-06-troobleshooting)
 
 
 ## Модуль 7. Облачная инфраструктура. Terraform
