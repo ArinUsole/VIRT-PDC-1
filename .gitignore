@@ -82,3 +82,5 @@ tmp/
 elk-cluster/
 backups/
 *.rpm
+09-ci-02-cicd/example/.scannerwork/.sonar_lock
+09-ci-02-cicd/example/.scannerwork/report-task.txt
