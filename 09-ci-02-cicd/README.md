@@ -50,17 +50,17 @@
 
 ```xml
 <metadata modelVersion="1.1.0">
-<groupId>netology</groupId>
-<artifactId>java</artifactId>
-<versioning>
-<latest>8_282</latest>
-<release>8_282</release>
-<versions>
-<version>8_102</version>
-<version>8_282</version>
-</versions>
-<lastUpdated>20220428151149</lastUpdated>
-</versioning>
+   <groupId>netology</groupId>
+   <artifactId>java</artifactId>
+   <versioning>
+      <latest>8_282</latest>
+      <release>8_282</release>
+      <versions>
+         <version>8_102</version>
+         <version>8_282</version>
+      </versions>
+      <lastUpdated>20220428151149</lastUpdated>
+   </versioning>
 </metadata>
 ```
 
@@ -80,10 +80,14 @@
 3. Проверяем директорию `~/.m2/repository/`, находим наш артефакт
 4. В ответе присылаем исправленный файл `pom.xml`
 
----
-
-### Как оформить ДЗ?
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
----
+```xml
+<dependencies>
+   <dependency>
+      <groupId>netology</groupId>
+      <artifactId>java</artifactId>
+      <version>8_282</version>
+      <classifier>distrib</classifier>
+      <type>tar.gz</type>
+   </dependency>
+</dependencies>
+```
