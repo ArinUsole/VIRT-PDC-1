@@ -39,7 +39,7 @@
 
 [x] 7.1. [Конфигурация как код](07-terraform-01-intro) 
 
-[] 7.2. [Облачные провайдеры и синтаксис Терраформ](07-terraform-02-syntax)
+[x] 7.2. [Облачные провайдеры и синтаксис Терраформ](07-terraform-02-syntax)
 
 [] 7.3. [Основы и принцип работы Терраформ](07-terraform-03-basic)
 
@@ -69,11 +69,11 @@
 
 [x] 9.2. [Процессы CI/CD](09-ci-02-cicd)
 
-9.3. [Jenkins](./09-ci-03-jenkins/README.md)
+[x] 9.3. [Jenkins](./09-ci-03-jenkins/README.md)
 
-9.4. [Teamcity](./09-ci-04-teamcity/README.md)
+[x] 9.4. [Teamcity](./09-ci-04-teamcity/README.md)
 
-9.5. [Gitlab](./09-ci-05-gitlab/README.md)
+[x] 9.5. [Gitlab](./09-ci-05-gitlab/README.md)
 
 ## Блок 10. Системы мониторинга
 
