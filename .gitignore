@@ -69,6 +69,7 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore CLI configuration files
+.terraform
 .terraformrc
 terraform.rc
 .terraform.lock*
@@ -86,3 +87,5 @@ example/
 mvn/
 jenkins/
 teamcity/
+07-terraform-02-syntax/asw/main.tf
+07-terraform-02-syntax/asw/variables.tf
