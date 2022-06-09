@@ -29,7 +29,7 @@ AWS предоставляет достаточно много бесплатн�
 В виде результата задания приложите вывод команды `aws configure list`.
 
 ```
-PS C:\Users\arinu\GITHUB\VIRT-PDC-1\07-terraform-02-syntax\asw> aws configure list
+PS C:\Users\arinu\GITHUB\VIRT-PDC-1\07-terraform-02-syntax\aws> aws configure list
       Name                    Value             Type    Location
       ----                    -----             ----    --------
    profile                <not set>             None    None
