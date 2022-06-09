@@ -45,7 +45,7 @@
 
 [] 7.4. [Средства командной работы над инфраструктурой](07-terraform-04-teamwork)
 
-[] 7.5. [Введение в Golang](07-terraform-05-golang)
+[x] 7.5. [Введение в Golang](07-terraform-05-golang)
 
 [] 7.6. [Написание собственных провайдеров для Terraform](07-terraform-06-providers)
 
