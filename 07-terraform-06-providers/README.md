@@ -27,17 +27,13 @@
 
 ```
 "name": {
-			Type:          schema.TypeString,
-			Optional:      true,
-			Computed:      true,
-			ForceNew:      true,
-			**ConflictsWith: []string{"name_prefix"},**
+    Type:          schema.TypeString,
+    Optional:      true,
+    Computed:      true,
+    ForceNew:      true,
+    ConflictsWith: []string{"name_prefix"},
 ```
-    * Какая максимальная длина имени?
 
-```
-Type: schema.TypeString, максимальная длина 80
-```
     * Какому регулярному выражению должно подчиняться имя?
 
 ```
@@ -54,6 +50,12 @@ if !re.MatchString(name) {
 }
 ```
     
+    * Какая максимальная длина имени?
+
+```
+Type: schema.TypeString, максимальная длина 80
+```
+
 ## Задача 2. (Не обязательно) 
 В рамках вебинара и презентации мы разобрали как создать свой собственный провайдер на примере кофемашины. 
 Также вот официальная документация о создании провайдера: 
