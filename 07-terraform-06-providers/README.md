@@ -22,39 +22,39 @@
 .\terraform-provider-aws\internal\provider\provider.go
   901,3: 		ResourcesMap: map[string]*schema.Resource{
 ```
-1. Для создания очереди сообщений SQS используется ресурс `aws_sqs_queue` у которого есть параметр `name`. 
+2. Для создания очереди сообщений SQS используется ресурс `aws_sqs_queue` у которого есть параметр `name`. 
     * С каким другим параметром конфликтует `name`? Приложите строчку кода, в которой это указано.
 
-```
-"name": {
-    Type:          schema.TypeString,
-    Optional:      true,
-    Computed:      true,
-    ForceNew:      true,
-    ConflictsWith: []string{"name_prefix"},
-```
+    ```
+    "name": {
+        Type:          schema.TypeString,
+        Optional:      true,
+        Computed:      true,
+        ForceNew:      true,
+        ConflictsWith: []string{"name_prefix"},
+    ```
 
     * Какому регулярному выражению должно подчиняться имя?
 
-```
-var re *regexp.Regexp
+    ```
+    var re *regexp.Regexp
 
-if fifoQueue {
-    re = regexp.MustCompile(`^[a-zA-Z0-9_-]{1,75}\.fifo$`)
-} else {
-    re = regexp.MustCompile(`^[a-zA-Z0-9_-]{1,80}$`)
-}
+    if fifoQueue {
+        re = regexp.MustCompile(`^[a-zA-Z0-9_-]{1,75}\.fifo$`)
+    } else {
+        re = regexp.MustCompile(`^[a-zA-Z0-9_-]{1,80}$`)
+    }
 
-if !re.MatchString(name) {
-    return fmt.Errorf("invalid queue name: %s", name)
-}
-```
+    if !re.MatchString(name) {
+        return fmt.Errorf("invalid queue name: %s", name)
+    }
+    ```
     
     * Какая максимальная длина имени?
 
-```
-Type: schema.TypeString, максимальная длина 80
-```
+    ```
+    Type: schema.TypeString, максимальная длина 80
+    ```
 
 ## Задача 2. (Не обязательно) 
 В рамках вебинара и презентации мы разобрали как создать свой собственный провайдер на примере кофемашины. 
