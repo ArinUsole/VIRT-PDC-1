@@ -31,7 +31,7 @@
         Optional:      true,
         Computed:      true,
         ForceNew:      true,
-        ConflictsWith: []string{"name_prefix"},
+        >>ConflictsWith: []string{"name_prefix"},<<
     ```
 
     * Какому регулярному выражению должно подчиняться имя?
