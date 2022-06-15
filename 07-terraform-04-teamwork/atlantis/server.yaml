@@ -1,0 +1,25 @@
+repos:
+- id: github.com/arinusole/specific-repo
+  allowed_overrides: [workflow]
+  allow_custom_workflows: true
+
+workflows:
+  default:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-lock=false"]
+    apply:
+      steps:
+      - apply
+
+  myworkflow:
+    plan:
+      steps:
+      - run: terraform init -input=false
+      - run: terraform workspace select $WORKSPACE
+      - run: terraform plan -input=false -refresh -out $PLANFILE
+    apply:
+      steps:
+      - run: terraform apply $PLANFILE

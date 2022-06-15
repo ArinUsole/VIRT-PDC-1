@@ -1,0 +1,7 @@
+version: 3
+projects:
+- name: netology
+  workspace: [stage, prod]
+  autoplan:
+    when_modified: ["*.tf", "../modules/**/*.tf"]
+    enabled: true
